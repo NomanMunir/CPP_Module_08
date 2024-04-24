@@ -13,10 +13,10 @@
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRCS = main.cpp \
+SRCS = main.cpp Span.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
-TARGET = find
+TARGET = span
 
 all: $(TARGET)
 
