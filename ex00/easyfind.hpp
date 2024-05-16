@@ -6,12 +6,18 @@
 #include <algorithm>
 template <class T>
 
-int easyfind( T arr, int value)
+int easyfind(T findFrom, int toFind)
 {
-  typename T :: iterator it = std::find(arr.begin(), arr.end(), value);
-  if (it != arr.end())
-    return (0);
-  return (1);
+  typename T::iterator it = std::find(findFrom.begin(), findFrom.end(), toFind);
+  if (it == findFrom.end())
+  {
+    std::cout << toFind << " not found!" << std::endl;
+    return (1);
+  }
+  else
+    std::cout << "First occurrence of " << toFind << " is at index " <<
+      std:: distance(findFrom.begin(), it) << std::endl;
+  return (0);
 }
 
 #endif

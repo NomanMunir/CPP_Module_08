@@ -6,17 +6,17 @@
 #    By: nmunir <nmunir@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 13:36:11 by nmunir            #+#    #+#              #
-#    Updated: 2024/03/13 15:39:06 by nmunir           ###   ########.fr        #
+#    Updated: 2024/05/16 14:07:04 by nmunir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRCS = main.cpp Span.cpp \
+SRCS = main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
-TARGET = span
+TARGET = Mutant
 
 all: $(TARGET)
 
