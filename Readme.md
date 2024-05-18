@@ -1,11 +1,35 @@
 # CPP_Module_08
 
-This module introduces advanced C++ concepts with a focus on containers and algorithms. The module consists of three exercises, each designed to deepen your understanding and proficiency in C++.
+This module introduces advanced C++ concepts with a focus on containers and algorithms. The module consists of three exercises, each designed to deepen understanding and proficiency in C++.
+
+## Containers and Algorithms
+
+### Containers
+Containers are data structures that store collections of objects. The C++ Standard Library provides several container classes, each optimized for specific types of operations. The most commonly used containers include:
+
+- **Vector**: A dynamic array that can grow in size.
+- **Deque**: A double-ended queue that allows fast insertion and deletion at both ends.
+- **List**: A doubly-linked list that allows fast insertion and deletion anywhere.
+- **Set**: A collection of unique elements, typically implemented as a binary search tree.
+- **Map**: A collection of key-value pairs, typically implemented as a binary search tree.
+- **Stack**: A container adapter that provides LIFO (last-in, first-out) access.
+- **Queue**: A container adapter that provides FIFO (first-in, first-out) access.
+
+### Algorithms
+Algorithms are functions provided by the C++ Standard Library that perform operations on containers. They are designed to be efficient and to work with any container that supports the necessary operations. Some common algorithms include:
+
+- **std::find**: Searches for an element in a range.
+- **std::sort**: Sorts elements in a range.
+- **std::reverse**: Reverses the order of elements in a range.
+- **std::copy**: Copies elements from one range to another.
+- **std::accumulate**: Sums up elements in a range.
+
+Using these containers and algorithms, you can write efficient and concise C++ code that handles a wide variety of data manipulation tasks.
 
 ## Exercise 00: easyfind
 
 ### Overview
-In this exercise, you will implement a template function `easyfind` that searches for the first occurrence of an integer in a given container.
+This exercise implements a template function `easyfind` that searches for the first occurrence of an integer in a given container.
 
 ### easyfind.hpp
 
@@ -52,7 +76,7 @@ int main() {
 ## Exercise 01: Span
 
 ### Overview
-In this exercise, you will create a class `Span` that can store a specified number of integers and provides functionality to find the shortest and longest span between the numbers.
+This exercise creates a class `Span` that can store a specified number of integers and provides functionality to find the shortest and longest span between the numbers.
 
 ### span.hpp
 
@@ -173,7 +197,7 @@ int main() {
 ## Exercise 02: MutantStack
 
 ### Overview
-In this exercise, you will implement a `MutantStack` class that inherits from `std::stack` and provides iterators to iterate through the elements.
+This exercise implements a `MutantStack` class that inherits from `std::stack` and provides iterators to iterate through the elements.
 
 ### mutantstack.hpp
 
@@ -273,5 +297,3 @@ int main() {
     return 0;
 }
 ```
-
-This README provides an overview and usage examples for each exercise in CPP Module 08. Follow the examples to implement and test your solutions effectively.
