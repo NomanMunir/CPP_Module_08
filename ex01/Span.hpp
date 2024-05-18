@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmunir <nmunir@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/18 10:37:27 by nmunir            #+#    #+#             */
+/*   Updated: 2024/05/18 16:35:35 by nmunir           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SPAN_HPP
 # define SPAN_HPP
 
@@ -9,37 +21,19 @@
 #include <climits>
 #include <limits>
 
-class Span
-{
-private:
-  unsigned int _n;
-  std::vector<int> _v;
-  Span();
-public:
-  Span(const unsigned int n);
-  Span(const Span &other);
-  Span &operator=(const Span &other);
-  ~Span();
-
-  void addNumber(int n);
-  void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-  unsigned int shortestSpan();
-  unsigned int longestSpan();
-
-  class FullSpanException : public std::exception
-  {
-    virtual const char *what() const throw() { return "Span is full";};
-  };
-
-  class RangeSpanException : public std::exception
-  {
-    virtual const char *what() const throw() { return "Out of range!";};
-  };
-
-  class NoSpanException : public std::exception
-  {
-    virtual const char *what() const throw() { return "No span to find";};
-  };
+class Span{
+	private:
+		unsigned int _size;
+		std::vector<int> data;
+		Span();
+	public:
+		Span(unsigned int n);
+		Span(const Span& other);
+		Span& operator=(const Span& rhs);
+		void addNumber(unsigned int n);
+		void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+		unsigned int shortestSpan();
+		unsigned int longestSpan();
 };
 
 #endif // SPAN_HPP

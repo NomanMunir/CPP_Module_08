@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-khni <ael-khni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: nmunir <nmunir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 20:33:10 by ael-khni          #+#    #+#             */
-/*   Updated: 2022/08/25 14:25:51 by ael-khni         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:44:38 by nmunir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main( void )
 {
-    std::cout << "---- TEST #1 -----" << std::endl;
+    std::cout << "---- TEST #1 -----\n" << std::endl;
   try
   {
     Span sp = Span( 5 );
@@ -32,7 +32,54 @@ int main( void )
     std::cerr << e.what() << '\n';
   }
   
-    std::cout << "\n---- TEST #1 -----" << std::endl;
+    std::cout << "\n---- TEST #2 -----\n" << std::endl;
+  try
+  {
+    Span sp = Span( 5 );
+    int arr[] = {10, 20, 30, 40, 50};
+    std::vector<int> vec(arr, arr + sizeof(arr) / sizeof(int));
+    sp.addNumber(vec.begin(), vec.end());
+
+    std::cout << "longestSpan: " << sp.longestSpan() << std::endl;
+    std::cout << "shortestSpan: " << sp.shortestSpan() << std::endl;
+  }
+  catch(const std::exception& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
+  
+    std::cout << "\n---- TEST #3 -----\n" << std::endl;
+  try
+  {
+    Span sp = Span( 5 );
+    int arr[] = {10, 20, 30, 40, 50, 60};
+    std::vector<int> vec(arr, arr + sizeof(arr) / sizeof(int));
+    sp.addNumber(vec.begin(), vec.end());
+
+    std::cout << "longestSpan: " << sp.longestSpan() << std::endl;
+    std::cout << "shortestSpan: " << sp.shortestSpan() << std::endl;
+  }
+  catch(const std::exception& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
+    std::cout << "\n---- TEST #4 -----\n" << std::endl;
+  try
+  {
+    Span sp = Span( 1 );
+    int arr[] = {10};
+    std::vector<int> vec(arr, arr + sizeof(arr) / sizeof(int));
+    sp.addNumber(vec.begin(), vec.end());
+
+    std::cout << "longestSpan: " << sp.longestSpan() << std::endl;
+    std::cout << "shortestSpan: " << sp.shortestSpan() << std::endl;
+  }
+  catch(const std::exception& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
+  
+    std::cout << "\n---- TEST #5 -----\n" << std::endl;
 
   try {
       std::vector<int>    l( 10000 );
@@ -49,6 +96,22 @@ int main( void )
   } catch ( std::exception& e ) {
       std::cout << e.what() << std::endl; 
   }
+  std::cout << "\n---- TEST #6 -----\n" << std::endl;
+  try
+  {
+    Span spCopy = Span( 10 );
+    int arr[] = {10, 12, 123, 124, 12, 123, 1};
+    std::vector<int> vec(arr, arr + sizeof(arr) / sizeof(int));
 
+    spCopy.addNumber(vec.begin(), vec.end());
+    Span sp(spCopy);
+
+    std::cout << "longestSpan: " << sp.longestSpan() << std::endl;
+    std::cout << "shortestSpan: " << sp.shortestSpan() << std::endl;
+  }
+  catch(const std::exception& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
   return 1;
 }
